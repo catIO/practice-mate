@@ -19,11 +19,11 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
   return (
     <div className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-[600px] flex flex-col">
       {/* Thumbnail */}
-      <div className="relative h-90 overflow-hidden">
+      <div className="relative h-96 overflow-hidden">
         <img 
           src={thumbnail} 
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
         />
         <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
         
