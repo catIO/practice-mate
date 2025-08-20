@@ -17,7 +17,12 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
   const { title, description, icon: Icon, thumbnail, features, color, url } = app;
 
   return (
-    <div className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-[600px] flex flex-col">
+    <a 
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-[600px] flex flex-col cursor-pointer"
+    >
       {/* Thumbnail */}
       <div className="relative h-96 overflow-hidden">
         <img 
@@ -25,7 +30,7 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
           alt={title}
           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
         />
-        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
         
         {/* Icon overlay */}
         <div className="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl">
@@ -57,17 +62,12 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
         </div>
 
         {/* Action buttons */}
-        <a 
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`w-full bg-gradient-to-r ${color} text-white py-3 px-6 rounded-xl font-semibold transition-all duration-200 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 cursor-pointer flex-shrink-0`}
-        >
+        <div className="w-full bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0">
           <span>Launch App</span>
           <ExternalLink className="h-4 w-4" />
-        </a>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
