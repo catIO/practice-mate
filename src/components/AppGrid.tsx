@@ -22,7 +22,7 @@ const AppGrid = () => {
     },
     {
       title: "Practice Koh-Pilot",
-      description: "Practice repetition tool that helps you master difficult passages through structured repetition with a metronome.",
+      description: "Practice repetition tool that helps you master difficult passages through structured repetition with the option of using a metronome.",
       icon: Repeat,
       thumbnail: practiceCopilotImage,
       features: ["Set the number of repetitions", "Track successful repetitions", "Metronome"],
@@ -31,7 +31,7 @@ const AppGrid = () => {
     },
     {
       title: "Practice Schedule",
-      description: "Weekly practice planner that helps you organize your leaning and maintining repertoire on a limited scheudle. Data is saved on the device for now, so it will only work locally. ",
+      description: "Weekly practice planner that helps you organize leaning and maintining repertoire on a limited scheudle. Data is stored in the browser for now. You can export and import data from settings.",
       icon: CalendarToday,
       thumbnail: practiceScheduleImage,
       features: ["Weekly planning", "Manage repertoire"],
@@ -40,7 +40,7 @@ const AppGrid = () => {
     },
     {
       title: "Rhythm Weaver",
-      description: "Metronome custumized to my needs with everything on one screen and advanced options to find the least annoying ticking sound.",
+      description: "This metronome is custumized to meet my needs with everything on one screen and advanced options to find the least annoying ticking sound.",
       icon: Timer,
       thumbnail: rhythmWeaverImage,
       features: ["Complex rhythms", "Visual beats", "Timer", "Customizable sounds"],
@@ -52,7 +52,6 @@ const AppGrid = () => {
   return (
     <section id="apps" className="px-6 py-20">
       <div className="max-w-7xl mx-auto">
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {apps.map((app, index) => (
