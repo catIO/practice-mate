@@ -12,7 +12,7 @@ const AppGrid = () => {
   const apps = [
    
     {
-      title: "Practice Mate",
+      title: "Practice Timer",
       description: "Work-break session timer designed for focused practice sessions. Optimize your practice time with structured intervals and rest periods.",
       icon: Schedule,
       thumbnail: practiceMateImage,
@@ -30,7 +30,7 @@ const AppGrid = () => {
       url: "https://koh-pilot.netlify.app/" // Replace with your actual URL
     },
     {
-      title: "Practice Schedule",
+      title: "Practice Planner",
       description: "Weekly practice planner that helps you organize leaning and maintining repertoire on a limited scheudle. Data is stored in the browser for now. You can export and import data from settings.",
       icon: CalendarToday,
       thumbnail: practiceScheduleImage,

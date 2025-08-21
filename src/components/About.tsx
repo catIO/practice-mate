@@ -37,11 +37,10 @@ const About = () => {
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
               <div className="flex items-center mb-4">
                 <Heart className="h-6 w-6 text-red-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Musician-First Design</h3>
+                <h3 className="text-xl font-semibold text-white">Contact</h3>
               </div>
               <p className="text-gray-300">
-                Created by someone who understands the challenges of practice. These tools are designed with 
-                real-world practice scenarios in mind.
+              <a href="https://www.microsaurus.com/" target="_blank" rel="noopener noreferrer">https://www.microsaurus.com/</a>
               </p>
             </div>
           </div>
