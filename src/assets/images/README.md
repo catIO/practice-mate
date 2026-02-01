@@ -4,12 +4,14 @@ Place your custom images here to replace the default Pexels stock photos.
 
 ## Required Images
 
-You need to add these 4 images with the exact filenames:
+You need to add these 6 images with the exact filenames:
 
 1. **`rhythm-weaver.jpg`** - For the Rhythm Weaver app (metronome/timing tool)
-2. **`practice-mate.jpg`** - For the Practice Mate app (work-break timer)
+2. **`practice-timer.png`** - For the Practice Timer app (work-break timer)
 3. **`practice-copilot.jpg`** - For the Practice Copilot app (repetition tool)
 4. **`practice-schedule.jpg`** - For the Practice Schedule app (weekly planner)
+5. **`bright-sight.png`** - For the Bright Sight app (sight reading exercises)
+6. **`scaled.png`** - For the Scaled app (scale practice)
 
 ## Image Format Requirements
 

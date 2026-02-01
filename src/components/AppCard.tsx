@@ -8,13 +8,13 @@ interface AppCardProps {
     icon: React.ComponentType<any>;
     thumbnail: string;
     features: string[];
-    color: string;
     url: string;
+    badge?: string;
   };
 }
 
 const AppCard: React.FC<AppCardProps> = ({ app }) => {
-  const { title, description, icon: Icon, thumbnail, features, color, url } = app;
+  const { title, description, icon: Icon, thumbnail, features, url, badge } = app;
 
   return (
     <a 
@@ -34,14 +34,19 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
         
         {/* Icon overlay */}
         <div className="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl">
-          <Icon sx={{ fontSize: 32 }} className="text-white" />
+          <Icon size={32} className="text-white" />
         </div>
       </div>
 
       {/* Content */}
       <div className="p-6 flex-1 flex flex-col">
-        <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300">
+        <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300 flex items-center gap-2">
           {title}
+          {badge && (
+            <span className="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/50">
+              {badge}
+            </span>
+          )}
         </h4>
         
         <p className="text-gray-300 text-base leading-relaxed mb-6 flex-1">

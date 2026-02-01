@@ -1,41 +1,55 @@
-import React from 'react';
 import AppCard from './AppCard';
-import { Timer, Schedule, Repeat, CalendarToday } from '@mui/icons-material';
+import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2 } from 'lucide-react';
 
 // Import local images
 import rhythmWeaverImage from '../assets/images/rhythm-weaver.jpg';
-import practiceMateImage from '../assets/images/practice-mate.jpg';
+import practiceTimerImage from '../assets/images/practice-timer.png';
 import practiceCopilotImage from '../assets/images/koh-pilot.jpg';
 import practiceScheduleImage from '../assets/images/practice-schedule.jpg';
+import brightSightImage from '../assets/images/bright-sight.png';
+import scaledImage from '../assets/images/scaled.png';
 
 const AppGrid = () => {
   const apps = [
-   
+    {
+      title: "Bright Sight",
+      description: "AI-powered classical guitar sight reading exercises with grade-appropriate sight reading exercises (Grades 1-8) and shared exercise storage.",
+      icon: BookOpen,
+      thumbnail: brightSightImage,
+      features: ["AI-generated exercises", "Public domain music scores", "Graded exercises", "Progress tracking"],
+      url: "https://bright-sight.app/",
+      badge: "beta"
+    },
+    {
+      title: "Scaled",
+      description: "Music practice app for learning and practicing scales with finger pattern drills and metronome support.",
+      icon: Music2,
+      thumbnail: scaledImage,
+      features: ["Personalized scale sractice", "Finger patterns", "Metronome", "Progress tracking"],
+      url: "https://practice-scales.netlify.app/"
+    },
     {
       title: "Practice Timer",
       description: "Work-break session timer designed for focused practice sessions. Optimize your practice time with structured intervals and rest periods.",
-      icon: Schedule,
-      thumbnail: practiceMateImage,
-      features: ["Pomodoro technique", "Custom intervals", "Break reminders"],
-      color: "from-green-500 to-teal-600",
+      icon: CalendarClock,
+      thumbnail: practiceTimerImage,
+      features: ["Pomodoro technique", "Custom work-break intervals", "Break reminders", "Time tracking"],
       url: "https://practicemate.netlify.app/" // Replace with your actual URL
     },
     {
       title: "Practice Koh-Pilot",
       description: "Practice repetition tool that helps you master difficult passages through structured repetition with the option of using a metronome.",
-      icon: Repeat,
+      icon: Repeat2,
       thumbnail: practiceCopilotImage,
       features: ["Set the number of repetitions", "Track successful repetitions", "Metronome"],
-      color: "from-purple-500 to-pink-600",
       url: "https://koh-pilot.netlify.app/" // Replace with your actual URL
     },
     {
       title: "Practice Planner",
       description: "Weekly practice planner that helps you organize leaning and maintining repertoire on a limited scheudle. Data is stored in the browser for now. You can export and import data from settings.",
-      icon: CalendarToday,
+      icon: Calendar,
       thumbnail: practiceScheduleImage,
       features: ["Weekly planning", "Manage repertoire"],
-      color: "from-orange-500 to-red-600",
       url: "https://planning-mate.netlify.app/" // Replace with your actual URL
     },
     {
@@ -44,7 +58,6 @@ const AppGrid = () => {
       icon: Timer,
       thumbnail: rhythmWeaverImage,
       features: ["Complex rhythms", "Visual beats", "Timer", "Customizable sounds"],
-      color: "from-blue-500 to-purple-600",
       url: "https://clickbot.netlify.app/" // Replace with your actual URL
     },
   ];
