@@ -29,11 +29,11 @@ const AppGrid = () => {
       url: "https://practice-scales.netlify.app/"
     },
     {
-      title: "Practice Timer",
-      description: "Work-break session timer designed for focused practice sessions. Optimize your practice time with structured intervals and rest periods.",
+      title: "Practice Mate",
+      description: "Work-break session timer designed for focused practice sessions. Optimize your practice time with structured intervals and rest periods. Create a practice pan and log your practice time",
       icon: CalendarClock,
       thumbnail: practiceTimerImage,
-      features: ["Pomodoro technique", "Custom work-break intervals", "Break reminders", "Time tracking"],
+      features: ["Pomodoro technique", "Custom work-break intervals and alarms", "Practice Plan", "Daily and weekly tracking"],
       url: "https://practicemate.netlify.app/" // Replace with your actual URL
     },
     {
