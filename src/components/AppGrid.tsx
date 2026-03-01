@@ -22,10 +22,10 @@ const AppGrid = () => {
     },
     {
       title: "Scaled",
-      description: "Music practice app for learning and practicing scales with finger pattern drills and metronome support.",
+      description: "Music practice app for practicing scales with and metronome support.",
       icon: Music2,
       thumbnail: scaledImage,
-      features: ["Personalized scale sractice", "Finger patterns", "Metronome", "Progress tracking"],
+      features: ["Personalized scale practice", "Finger patterns", "Metronome", "Goal setting", "Progress tracking"],
       url: "https://practice-scales.netlify.app/"
     },
     {
@@ -33,7 +33,7 @@ const AppGrid = () => {
       description: "Work-break session timer designed for focused practice sessions. Optimize your practice time with structured intervals and rest periods. Create a practice pan and log your practice time",
       icon: CalendarClock,
       thumbnail: practiceTimerImage,
-      features: ["Pomodoro technique", "Custom work-break intervals and alarms", "Practice Plan", "Daily and weekly tracking"],
+      features: ["Pomodoro technique", "Custom work-break intervals and alarms", "Practice Plan", "Daily and weekly time tracking"],
       url: "https://practicemate.netlify.app/" // Replace with your actual URL
     },
     {
