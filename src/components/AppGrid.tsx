@@ -1,5 +1,5 @@
 import AppCard from './AppCard';
-import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2 } from 'lucide-react';
+import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video } from 'lucide-react';
 
 // Import local images
 import rhythmWeaverImage from '../assets/images/rhythm-weaver.jpg';
@@ -8,6 +8,7 @@ import practiceCopilotImage from '../assets/images/koh-pilot.jpg';
 import practiceScheduleImage from '../assets/images/practice-schedule.jpg';
 import brightSightImage from '../assets/images/bright-sight.png';
 import scaledImage from '../assets/images/scaled.png';
+import practiceMirrorImage from '../assets/images/practice-mirror.png';
 
 const AppGrid = () => {
   const apps = [
@@ -19,6 +20,14 @@ const AppGrid = () => {
       features: ["AI-generated exercises", "Public domain music scores", "Graded exercises", "Progress tracking"],
       url: "https://bright-sight.app/",
       badge: "beta"
+    },
+    {
+      title: "Practice Mirror",
+      description: "Feedback tool for musicians. Record your practice, trim the video, and upload directly to YouTube to track your progress.",
+      icon: Video,
+      thumbnail: practiceMirrorImage,
+      features: ["Live visual feedback", "Video trimming", "Direct YouTube upload", "High-quality recording"],
+      url: "https://practice-mirror.netlify.app/"
     },
     {
       title: "Scaled",
@@ -45,20 +54,20 @@ const AppGrid = () => {
       url: "https://koh-pilot.netlify.app/" // Replace with your actual URL
     },
     {
-      title: "Practice Planner",
-      description: "Weekly practice planner that helps you organize leaning and maintining repertoire on a limited scheudle. Data is stored in the browser for now. You can export and import data from settings.",
-      icon: Calendar,
-      thumbnail: practiceScheduleImage,
-      features: ["Weekly planning", "Manage repertoire"],
-      url: "https://planning-mate.netlify.app/" // Replace with your actual URL
-    },
-    {
       title: "Rhythm Weaver",
       description: "This metronome is custumized to meet my needs with everything on one screen and advanced options to find the least annoying ticking sound.",
       icon: Timer,
       thumbnail: rhythmWeaverImage,
       features: ["Complex rhythms", "Visual beats", "Timer", "Customizable sounds"],
       url: "https://clickbot.netlify.app/" // Replace with your actual URL
+    },
+    {
+      title: "Practice Planner",
+      description: "Weekly practice planner that helps you organize leaning and maintining repertoire on a limited scheudle. Data is stored in the browser for now. You can export and import data from settings.",
+      icon: Calendar,
+      thumbnail: practiceScheduleImage,
+      features: ["Weekly planning", "Manage repertoire"],
+      url: "https://planning-mate.netlify.app/" // Replace with your actual URL
     },
   ];
 
