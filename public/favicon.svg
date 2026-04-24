@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    .bg { fill: #ffffff; }
+    .icon { fill: #000000; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #000000; }
+      .icon { fill: #ffffff; }
+    }
+  </style>
+  <rect class="bg" width="512" height="512" rx="80"/>
+  <path class="icon" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" transform="translate(100, 100) scale(16)"/>
+</svg>
