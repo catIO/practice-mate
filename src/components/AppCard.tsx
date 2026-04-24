@@ -21,19 +21,19 @@ const AppCard: React.FC<AppCardProps> = ({ app }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-[600px] flex flex-col cursor-pointer"
+      className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col cursor-pointer"
     >
       {/* Thumbnail */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
         <img 
           src={thumbnail} 
           alt={title}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+          className="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
         
         {/* Icon overlay */}
-        <div className="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+        <div className="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%]">
           <Icon size={32} className="text-white" />
         </div>
       </div>

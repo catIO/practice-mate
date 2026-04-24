@@ -2,10 +2,10 @@ import AppCard from './AppCard';
 import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video } from 'lucide-react';
 
 // Import local images
-import rhythmWeaverImage from '../assets/images/rhythm-weaver.jpg';
+import rhythmWeaverImage from '../assets/images/rhythm-weaver-icon.svg';
 import practiceTimerImage from '../assets/images/practice-timer.png';
-import practiceCopilotImage from '../assets/images/koh-pilot.jpg';
-import practiceScheduleImage from '../assets/images/practice-schedule.jpg';
+import practiceCopilotImage from '../assets/images/koh-pilot-icon.svg';
+import practiceScheduleImage from '../assets/images/practice-schedule.svg';
 import brightSightImage from '../assets/images/bright-sight.png';
 import scaledImage from '../assets/images/scaled.png';
 import practiceMirrorImage from '../assets/images/practice-mirror.png';
