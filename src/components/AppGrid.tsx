@@ -1,5 +1,5 @@
 import AppCard from './AppCard';
-import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video } from 'lucide-react';
+import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video, Search } from 'lucide-react';
 
 // Import local images
 import rhythmWeaverImage from '../assets/images/rhythm-weaver-icon.svg';
@@ -9,9 +9,19 @@ import practiceScheduleImage from '../assets/images/practice-schedule.svg';
 import brightSightImage from '../assets/images/bright-sight.png';
 import scaledImage from '../assets/images/scaled.png';
 import practiceMirrorImage from '../assets/images/practice-mirror.png';
+import spotPracticeImage from '../assets/images/spot-practice-icon.svg';
 
 const AppGrid = () => {
   const apps = [
+    {
+      title: "Spot Practice",
+      description: "Focused passage practice tool for musicians. Upload your MusicXML scores and isolate specific measures to master difficult sections through targeted repetition.",
+      icon: Search,
+      thumbnail: spotPracticeImage,
+      features: ["MusicXML rendering", "Random passage selection", "Measure-based isolation", "Clean reading interface"],
+      url: "https://spot.practice-mate.app/",
+      badge: "new"
+    },
     {
       title: "Bright Sight",
       description: "AI-powered classical guitar sight reading exercises with grade-appropriate sight reading exercises (Grades 1-8) and shared exercise storage.",
