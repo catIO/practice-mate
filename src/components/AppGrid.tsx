@@ -1,5 +1,5 @@
 import AppCard from './AppCard';
-import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video, Search } from 'lucide-react';
+import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video, Search, TrendingUp } from 'lucide-react';
 
 // Import local images
 import rhythmWeaverImage from '../assets/images/rhythm-weaver-icon.svg';
@@ -10,6 +10,7 @@ import brightSightImage from '../assets/images/bright-sight.png';
 import scaledImage from '../assets/images/scaled.png';
 import practiceMirrorImage from '../assets/images/practice-mirror.png';
 import spotPracticeImage from '../assets/images/spot-practice-icon.svg';
+import clickUpImage from '../assets/images/click-up-icon.svg';
 
 const AppGrid = () => {
   const apps = [
@@ -20,6 +21,15 @@ const AppGrid = () => {
       thumbnail: spotPracticeImage,
       features: ["MusicXML rendering", "Random passage selection", "Measure-based isolation", "Clean reading interface"],
       url: "https://spot.practice-mate.app/",
+      badge: "new"
+    },
+    {
+      title: "Click Up",
+      description: "Advanced tempo progression practice tool based on Molly Gebrian's interleaved learning technique. Build speed and control by practicing measure segments across automated tempo increments.",
+      icon: TrendingUp,
+      thumbnail: clickUpImage,
+      features: ["Molly Gebrian method", "MusicXML rendering", "Incremental tempo builder", "Context cycle variations"],
+      url: "https://clicking-up.netlify.app/",
       badge: "new"
     },
     {
