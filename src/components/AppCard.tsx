@@ -1,11 +1,11 @@
-import React from 'react';
+import { ElementType } from 'react';
 import { ExternalLink } from 'lucide-react';
 
-interface AppCardProps {
+export interface AppCardProps {
   app: {
     title: string;
     description: string;
-    icon: React.ComponentType<any>;
+    icon: ElementType;
     thumbnail: string;
     features: string[];
     url: string;
@@ -13,7 +13,7 @@ interface AppCardProps {
   };
 }
 
-const AppCard: React.FC<AppCardProps> = ({ app }) => {
+const AppCard = ({ app }: AppCardProps) => {
   const { title, description, icon: Icon, thumbnail, features, url, badge } = app;
 
   return (

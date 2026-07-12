@@ -1,5 +1,4 @@
-import React from 'react';
-import { Music, Code, Heart, Users } from 'lucide-react';
+import { Code, Heart } from 'lucide-react';
 
 const About = () => {
   return (

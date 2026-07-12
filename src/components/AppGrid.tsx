@@ -1,5 +1,5 @@
-import AppCard from './AppCard';
-import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video, Search, TrendingUp } from 'lucide-react';
+import AppCard, { AppCardProps } from './AppCard';
+import { Timer, CalendarClock, Repeat2, Calendar, BookOpen, Music2, Video, Search, TrendingUp, FileMusic } from 'lucide-react';
 
 // Import local images
 import rhythmWeaverImage from '../assets/images/rhythm-weaver-icon.svg';
@@ -11,9 +11,19 @@ import scaledImage from '../assets/images/scaled.png';
 import practiceMirrorImage from '../assets/images/practice-mirror.png';
 import spotPracticeImage from '../assets/images/spot-practice-icon.svg';
 import clickUpImage from '../assets/images/click-up-icon.svg';
+import scoreToneImage from '../assets/images/score-tone-icon.svg';
 
 const AppGrid = () => {
-  const apps = [
+  const apps: AppCardProps['app'][] = [
+    {
+      title: "Score Tone",
+      description: "PDF sheet music viewer and sharing platform designed for comfortable reading. Connect with Google Drive to select and view your music scores locally, apply custom visual filters to reduce eye strain, and easily share scores with fellow musicians.",
+      icon: FileMusic,
+      thumbnail: scoreToneImage,
+      features: ["Import directly from Google Drive", "Eye strain reduction filters", "Easy score sharing", "Local PDF rendering & annotations"],
+      url: "https://score-tone.netlify.app/",
+      badge: "new"
+    },
     {
       title: "Spot Practice",
       description: "Focused passage practice tool for musicians. Upload your MusicXML scores and isolate specific measures to master difficult sections through targeted repetition.",

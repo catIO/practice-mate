@@ -1,12 +1,9 @@
-import React from 'react';
-import { Music } from 'lucide-react';
-
 interface HeaderProps {
   onPageChange: (page: string) => void;
   currentPage: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ onPageChange, currentPage }) => {
+const Header = ({ onPageChange, currentPage }: HeaderProps) => {
   return (
     <header className="relative z-10 px-6 py-4">
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
@@ -33,6 +30,16 @@ const Header: React.FC<HeaderProps> = ({ onPageChange, currentPage }) => {
             }`}
           >
             About
+          </button>
+          <button 
+            onClick={() => onPageChange('privacy')}
+            className={`transition-colors duration-200 ${
+              currentPage === 'privacy' 
+                ? 'text-white' 
+                : 'text-gray-300 hover:text-white'
+            }`}
+          >
+            Privacy
           </button>
         </div>
       </nav>
