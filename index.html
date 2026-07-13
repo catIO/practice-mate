@@ -9,7 +9,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static fallback for Google OAuth verification and crawlers -->
+      <div style="display: none;">
+        <h1>Practice Mate</h1>
+        <p>A structured practice toolkit for musicians, featuring Spot Practice, Click Up, Bright Sight, Practice Mirror, Scaled, Practice Mate timer, Practice Koh-Pilot, Rhythm Weaver, Practice Planner, and Score Tone.</p>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
