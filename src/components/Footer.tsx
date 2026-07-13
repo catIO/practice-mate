@@ -28,12 +28,12 @@ const Footer = ({ onPageChange }: FooterProps) => {
           >
             About
           </button>
-          <button 
-            onClick={() => onPageChange('privacy')}
+          <a 
+            href="/privacy.html"
             className="hover:text-white transition-colors duration-200 font-medium text-purple-400 hover:text-purple-300"
           >
             Privacy Policy
-          </button>
+          </a>
           <a 
             href="https://www.microsaurus.com/" 
             target="_blank" 

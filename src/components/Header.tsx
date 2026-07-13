@@ -31,8 +31,8 @@ const Header = ({ onPageChange, currentPage }: HeaderProps) => {
           >
             About
           </button>
-          <button 
-            onClick={() => onPageChange('privacy')}
+          <a 
+            href="/privacy.html"
             className={`transition-colors duration-200 ${
               currentPage === 'privacy' 
                 ? 'text-white' 
@@ -40,7 +40,7 @@ const Header = ({ onPageChange, currentPage }: HeaderProps) => {
             }`}
           >
             Privacy
-          </button>
+          </a>
         </div>
       </nav>
     </header>
