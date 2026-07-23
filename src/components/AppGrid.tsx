@@ -21,7 +21,7 @@ const AppGrid = () => {
       icon: FileMusic,
       thumbnail: scoreToneImage,
       features: ["Import directly from Google Drive", "Eye strain reduction filters", "Easy score sharing", "Local PDF rendering & annotations"],
-      url: "https://score-tone.netlify.app/",
+      url: "https://score.practice-mate.app/",
       badge: "new"
     },
     {
@@ -39,7 +39,7 @@ const AppGrid = () => {
       icon: TrendingUp,
       thumbnail: clickUpImage,
       features: ["Molly Gebrian method", "MusicXML rendering", "Incremental tempo builder", "Context cycle variations"],
-      url: "https://clicking-up.netlify.app/",
+      url: "https://clickup.practice-mate.app/",
       badge: "new"
     },
     {
@@ -57,7 +57,7 @@ const AppGrid = () => {
       icon: Video,
       thumbnail: practiceMirrorImage,
       features: ["Live visual feedback", "Video trimming", "Direct YouTube upload", "High-quality recording"],
-      url: "https://practice-mirror.netlify.app/"
+      url: "https://mirror.practice-mate.app/"
     },
     {
       title: "Scaled",
@@ -65,7 +65,7 @@ const AppGrid = () => {
       icon: Music2,
       thumbnail: scaledImage,
       features: ["Personalized scale practice", "Finger patterns", "Metronome", "Goal setting", "Progress tracking"],
-      url: "https://practice-scales.netlify.app/"
+      url: "https://scales.practice-mate.app/"
     },
     {
       title: "Practice Mate",
@@ -73,7 +73,7 @@ const AppGrid = () => {
       icon: CalendarClock,
       thumbnail: practiceTimerImage,
       features: ["Pomodoro technique", "Custom work-break intervals and alarms", "Practice Plan", "Daily and weekly time tracking"],
-      url: "https://practicemate.netlify.app/" // Replace with your actual URL
+      url: "https://timer.practice-mate.app/"
     },
     {
       title: "Practice Koh-Pilot",
@@ -81,7 +81,7 @@ const AppGrid = () => {
       icon: Repeat2,
       thumbnail: practiceCopilotImage,
       features: ["Set the number of repetitions", "Track successful repetitions", "Metronome"],
-      url: "https://koh-pilot.netlify.app/" // Replace with your actual URL
+      url: "https://koh-pilot.netlify.app/"
     },
     {
       title: "Rhythm Weaver",
@@ -89,7 +89,7 @@ const AppGrid = () => {
       icon: Timer,
       thumbnail: rhythmWeaverImage,
       features: ["Complex rhythms", "Visual beats", "Timer", "Customizable sounds"],
-      url: "https://clickbot.netlify.app/" // Replace with your actual URL
+      url: "https://rhythm.practice-mate.app/"
     },
     {
       title: "Practice Planner",
