@@ -65,7 +65,7 @@ const AppGrid = () => {
       icon: Music2,
       thumbnail: scaledImage,
       features: ["Personalized scale practice", "Finger patterns", "Metronome", "Goal setting", "Progress tracking"],
-      url: "https://scales.practice-mate.app/"
+      url: "https://scaled.practice-mate.app/"
     },
     {
       title: "Practice Mate",
@@ -81,7 +81,7 @@ const AppGrid = () => {
       icon: Repeat2,
       thumbnail: practiceCopilotImage,
       features: ["Set the number of repetitions", "Track successful repetitions", "Metronome"],
-      url: "https://koh-pilot.netlify.app/"
+      url: "https://koh.practice-mate.app/"
     },
     {
       title: "Rhythm Weaver",
