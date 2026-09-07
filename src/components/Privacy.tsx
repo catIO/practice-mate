@@ -19,7 +19,7 @@ const Privacy = () => {
           {/* Intro */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-700/50">
             <p className="text-gray-300 text-lg leading-relaxed">
-              This Privacy Policy explains how our suite of music practice tools (collectively referred to as "Practice Mate Apps", including Spot Practice, Click Up, Bright Sight, Practice Mirror, Scaled, Practice Mate timer, Practice Koh-Pilot, Rhythm Weaver, Practice Planner, and ScoreTone) handles your data. We are committed to protecting your privacy and ensuring a secure experience.
+              This Privacy Policy explains how our suite of music practice tools (collectively referred to as "Practice Mate Apps", including Bright Sight, Score Tone, Practice Mirror, Practice Mate timer, Spot Practice, Click Up, Practice Koh-Pilot, Rhythm Weaver, Scaled, and Pitch Mate) handles your data. We are committed to protecting your privacy and ensuring a secure experience.
             </p>
           </div>
 
