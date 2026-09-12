@@ -1,6 +1,10 @@
 import { Code, Heart } from 'lucide-react';
 
 const About = () => {
+  const user = 'hello';
+  const domain = 'catherina.dev';
+  const email = `${user}@${domain}`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
       {/* Header Section */}
@@ -8,7 +12,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              About Practice Mate
+              About Practice Lab
             </h1>
 
           </div>
@@ -39,7 +43,9 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-white">Contact</h3>
               </div>
               <p className="text-gray-300">
-              <a href="https://www.microsaurus.com/" target="_blank" rel="noopener noreferrer">https://www.microsaurus.com/</a>
+                <a href={`mai` + `lto:${email}`} className="text-purple-400 hover:text-purple-300 hover:underline">
+                  {email}
+                </a>
               </p>
             </div>
           </div>

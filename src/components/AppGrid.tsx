@@ -48,7 +48,7 @@ const AppGrid = () => {
         "Share practice summaries with a teacher",
         "Keeps your screen awake during a session"
       ],
-      url: "https://timer.practice-mate.app/"
+      url: "https://timer.practice-lab.net/"
     },
     {
       title: "Score Tone",
@@ -66,7 +66,7 @@ const AppGrid = () => {
         "Keeps your screen awake while you play",
         "Works offline with saved scores"
       ],
-      url: "https://score.practice-mate.app/",
+      url: "https://score.practice-lab.net/",
       badge: "new"
     },
     {
@@ -84,7 +84,7 @@ const AppGrid = () => {
         "Upload clips to YouTube as unlisted videos",
         "Your recordings stay on your device unless you choose to share them"
       ],
-      url: "https://mirror.practice-mate.app/"
+      url: "https://mirror.practice-lab.net/"
     },
     {
       title: "Spot Practice",
@@ -99,7 +99,7 @@ const AppGrid = () => {
         "Zoom notation for comfortable reading",
         "Randomize trouble spots for more varied practice"
       ],
-      url: "https://spot.practice-mate.app/"
+      url: "https://spot.practice-lab.net/"
     },
     {
       title: "Click Up",
@@ -115,7 +115,7 @@ const AppGrid = () => {
         "Isolate passages from MusicXML scores",
         "Simple controls designed for use while playing"
       ],
-      url: "https://clickup.practice-mate.app/"
+      url: "https://clickup.practice-lab.net/"
     },
     {
       title: "Practice Koh-Pilot",
@@ -131,7 +131,7 @@ const AppGrid = () => {
         "Clear progress toward your goal",
         "Useful for difficult passages, auditions, and performance preparation"
       ],
-      url: "https://koh.practice-mate.app/"
+      url: "https://koh.practice-lab.net/"
     },
     {
       title: "Rhythm Weaver",
@@ -149,7 +149,7 @@ const AppGrid = () => {
         "Share rhythm setups with a link",
         "Keeps your screen awake while you practice"
       ],
-      url: "https://rhythm.practice-mate.app/"
+      url: "https://rhythm.practice-lab.net/"
     },
     {
       title: "Scaled",
@@ -167,7 +167,7 @@ const AppGrid = () => {
         "Track practice streaks",
         "Customize the scales included in your routine"
       ],
-      url: "https://scaled.practice-mate.app/"
+      url: "https://scaled.practice-lab.net/"
     },
     {
       title: "Pitch Mate",

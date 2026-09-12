@@ -11,7 +11,7 @@ const Footer = ({ onPageChange }: FooterProps) => {
         {/* Brand */}
         <div className="flex items-center space-x-3">
           <Music className="h-6 w-6 text-purple-400" />
-          <span className="text-white font-bold tracking-wider">PRACTICE MATE</span>
+          <span className="text-white font-bold tracking-wider">PRACTICE LAB</span>
         </div>
 
         {/* Links */}
@@ -34,19 +34,11 @@ const Footer = ({ onPageChange }: FooterProps) => {
           >
             Privacy Policy
           </a>
-          <a 
-            href="https://www.microsaurus.com/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors duration-200"
-          >
-            Contact
-          </a>
         </div>
 
         {/* Copyright */}
         <div className="text-gray-500 text-xs text-center md:text-right">
-          &copy; {new Date().getFullYear()} Practice Mate. All rights reserved.
+          &copy; {new Date().getFullYear()} Practice Lab. All rights reserved.
         </div>
       </div>
     </footer>

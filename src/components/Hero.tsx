@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Practice Mate
+            Practice Lab
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent block">
               Tools for Musicians
             </span>

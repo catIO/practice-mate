@@ -4,19 +4,670 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="LJkxlIKroX5GPUawq4fv82OuEHo4u1hn4OAQwshVxB8" />
-    <title>Practice Mate - Music Practice Tools</title>
-    <meta name="description" content="Practice tools to enhance your musical journey. ." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Practice Lab - Music Practice Tools</title>
+    <meta name="description" content="A structured practice toolkit for musicians, featuring Bright Sight, Score Tone, Practice Mirror, Practice Mate timer, Spot Practice, Click Up, Practice Koh-Pilot, Rhythm Weaver, Scaled, and Pitch Mate." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div id="root">
-      <!-- Static fallback for Google OAuth verification and crawlers -->
-      <div style="display: none;">
-        <h1>Practice Mate</h1>
-        <p>A structured practice toolkit for musicians, featuring Bright Sight, Score Tone, Practice Mirror, Practice Mate timer, Spot Practice, Click Up, Practice Koh-Pilot, Rhythm Weaver, Scaled, and Pitch Mate.</p>
-        <a href="/privacy.html">Privacy Policy</a>
+  <body class="bg-gray-950 text-white min-h-screen">
+    <div class="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-black flex flex-col justify-between">
+      <div>
+        <!-- Header -->
+        <header class="relative z-10 px-6 py-4">
+          <nav class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3"></div>
+            <div class="flex items-center space-x-8 text-sm md:text-base">
+              <button 
+                id="nav-apps"
+                onclick="showPage('home')"
+                class="transition-colors duration-200 text-white font-medium cursor-pointer"
+              >
+                Apps
+              </button>
+              <button 
+                id="nav-about"
+                onclick="showPage('about')"
+                class="transition-colors duration-200 text-gray-300 hover:text-white cursor-pointer"
+              >
+                About
+              </button>
+              <a 
+                href="./privacy.html"
+                class="transition-colors duration-200 text-gray-300 hover:text-white"
+              >
+                Privacy
+              </a>
+            </div>
+          </nav>
+        </header>
+
+        <!-- Home View (Hero + App Grid) -->
+        <div id="page-home">
+          <!-- Hero -->
+          <section class="relative px-6 py-20 text-center">
+            <div class="max-w-5xl mx-auto">
+              <div class="mb-8">
+                <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                  Practice Lab
+                  <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent block">
+                    Tools for Musicians
+                  </span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  A structured practice toolkit for musicians
+                </p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <button
+                  onclick="scrollToApps()"
+                  class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-2xl cursor-pointer"
+                >
+                  Explore Tools
+                </button>
+              </div>
+
+              <div class="animate-bounce">
+                <button onclick="scrollToApps()" aria-label="Scroll to tools" class="text-gray-400 hover:text-white cursor-pointer bg-transparent border-0 p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 mx-auto"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Background decoration -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+              <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-500 rounded-full opacity-10 blur-3xl"></div>
+              <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>
+            </div>
+          </section>
+
+          <!-- Apps Grid -->
+          <section id="apps" class="px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 1. Bright Sight -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/bright-sight.png" 
+                      alt="Bright Sight"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Bright Sight
+                      <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/50">beta</span>
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      Fresh sight-reading practice for classical guitar.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Build real sight-reading skills with new exercises whenever you practice. Choose your level and get material designed specifically for classical guitar, so you can focus on reading rather than remembering exercises you've already played.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Sight-reading exercises for Grades 1–8</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">New exercises whenever you practice</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Written specifically for classical guitar</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Play exercises with built-in score playback and tempo control</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Save exercises you want to revisit</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Set daily sight-reading goals</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://bright-sight.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 2. Practice Mate -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/practice-timer.png" 
+                      alt="Practice Mate"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Practice Mate
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      Give your practice session some structure.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Plan what you want to work on, give each piece or exercise its own time, and keep track of the repertoire you're studying. Practice Mate helps you spend your time intentionally without turning practice into a productivity exercise.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Build practice routines around your repertoire</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Set a target time for each piece or exercise</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Keep practicing past the timer when you need to</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Store notes, score links, and reference videos with each piece</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Track practice time and consistency</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Keep lesson plans and goals together</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Share practice summaries with a teacher</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Keeps your screen awake during a session</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://timer.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 3. Score Tone -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/score-tone-icon.svg" 
+                      alt="Score Tone"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="16" r="2"/><circle cx="6" cy="18" r="2"/><path d="M4 10V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H4"/><polyline points="14 2 14 8 20 8"/><path d="M16 16v-3a2 2 0 0 0-2-2H8v5"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Score Tone
+                      <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/50">new</span>
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      A sheet music reader designed for practice and performance
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Read PDFs and digital scores in a comfortable, eye-friendly format. Customize the score tint with options such as sepia to reduce eye strain, organize your scores, and bookmark pages for quick access. For XML scores, use synthesized playback and create loops to practice difficult passages. Share scores through connected cloud storage, including Google Drive.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Comfortable display modes for long practice sessions</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Darken faint or washed-out sheet music</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Single-page, two-page, scrolling, and full-screen views</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Bookmark sections and rehearsal points</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Play and loop measures in MusicXML scores</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Share links that open directly to a specific score or page</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Keeps your screen awake while you play</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Works offline with saved scores</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://score.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 4. Practice Mirror -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/practice-mirror.png" 
+                      alt="Practice Mirror"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Practice Mirror
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      See, review, and evaluate your playing while you practice.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Use your phone, tablet, or computer as a practice mirror to check posture, hand position, movement, and technique. Record a take when you want a closer look, trim it, and download or share it via direct YouTube upload.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Live visual feedback while you play</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Record practice takes</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Trim clips directly after recording</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Choose your camera and microphone</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Countdown before recording starts</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Upload clips to YouTube as unlisted videos</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Your recordings stay on your device unless you choose to share them</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://mirror.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 5. Spot Practice -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/spot-practice-icon.svg" 
+                      alt="Spot Practice"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Spot Practice
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      Focused spot practice for difficult passages.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Practice the whole piece methodically without playing it from beginning to end every time. Spot Practice helps you divide a score into manageable sections, focus on one passage at a time, and work through different spots systematically. By rotating through sections and returning to difficult passages, you can build reliable technique and musical memory while avoiding the habit of simply running through the entire piece during the early stages of learning.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Isolate specific measures from a MusicXML score</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Practice short passages without the rest of the page</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Switch between the isolated passage and full-score context</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Zoom notation for comfortable reading</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Randomize trouble spots for more varied practice</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://spot.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 6. Click Up -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/click-up-icon.svg" 
+                      alt="Click Up"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Click Up
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      A different way to build speed and accuracy.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Work toward faster tempos by moving between comfortable playing, faster bursts, and recovery tempos instead of simply increasing the metronome a few beats at a time.
+
+Inspired by Dr. Molly Gebrian’s neuroscience-based methodology on interleaved practice in music learning and performance training.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Automatically varies your practice tempo</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Alternate between comfortable and faster tempos</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Practice short high-speed bursts</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Control repetitions and subdivisions</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Isolate passages from MusicXML scores</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Simple controls designed for use while playing</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://clickup.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 7. Practice Koh-Pilot -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/koh-pilot-icon.svg" 
+                      alt="Practice Koh-Pilot"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 3-3 3 3"/><path d="M13 18H7a2 2 0 0 1-2-2V6"/><path d="m22 15-3 3-3-3"/><path d="M11 6h6a2 2 0 0 1 2 2v10"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Practice Koh-Pilot
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      Real accountability for clean, consistent repetitions.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Choose how many clean repetitions you want in a row. Each successful attempt moves you closer to your goal; a mistake resets the count. It's a simple way to turn “I think I know this” into consistent playing you can trust.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Set a consecutive clean-repetition goal</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Reset the count when a repetition isn't clean</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Built-in metronome</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Large controls that are easy to use from a music stand</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Clear progress toward your goal</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Useful for difficult passages, auditions, and performance preparation</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://koh.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 8. Rhythm Weaver -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/rhythm-weaver-icon.svg" 
+                      alt="Rhythm Weaver"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Rhythm Weaver
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      A metronome made for long practice sessions.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Get the timing tools you need without digging through menus. Rhythm Weaver combines a comfortable click sound with tempo, meter, subdivisions, rhythmic patterns, and practice controls on one screen.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Warm, less intrusive metronome sounds</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Tempo and tap tempo</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Subdivisions and accents</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Odd meters and more complex rhythmic patterns</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Visual beat indicators</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Practice timer</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Share rhythm setups with a link</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Keeps your screen awake while you practice</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://rhythm.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 9. Scaled -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/scaled.png" 
+                      alt="Scaled"
+                      class="h-full aspect-square object-contain rounded-[15.6%] transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300 group-hover:opacity-30"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 transition-all duration-300 flex items-center gap-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text">
+                      Scaled
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      Make scale practice less automatic.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Scaled varies what you practice so scales don't become the same mechanical routine every day. Move through different keys and right-hand finger combinations while keeping track of your practice goals.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Randomizes the order of scales</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Cycles through classical guitar right-hand finger combinations</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">View notation for each scale</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Built-in metronome</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Set weekly practice goals</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Automatically works out a daily target</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Track practice streaks</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Customize the scales included in your routine</span></div>
+                      </div>
+                    </div>
+                    <a 
+                      href="https://scaled.practice-lab.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+                    >
+                      <span>Launch App</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 10. Pitch Mate -->
+                <div class="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-300 h-full flex flex-col">
+                  <div class="relative h-64 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="./assets/images/pitch-mate-icon.svg" 
+                      alt="Pitch Mate"
+                      class="h-full aspect-square object-contain rounded-[15.6%]"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-700 opacity-20 transition-opacity duration-300"></div>
+                    <div class="absolute top-4 left-4 p-3 bg-white/20 backdrop-blur-sm rounded-[15.6%] text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                    </div>
+                  </div>
+                  <div class="p-6 flex-1 flex flex-col">
+                    <h4 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                      Pitch Mate
+                      <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/50">Android</span>
+                    </h4>
+                    <p class="text-white font-bold italic text-base py-1 mb-4 leading-snug">
+                      A clear, stable tuner for musicians.
+                    </p>
+                    <p class="text-gray-300 text-base leading-relaxed mb-4 whitespace-pre-line">Tune quickly with a bold circular dial that clearly shows how sharp or flat you are with smooth visual feedback. Pitch Mate gives you a large, high-contrast display that is easy to read from a music stand, with custom A4 calibration for playing at reference pitches other than 440 Hz.</p>
+                    <div class="mb-6">
+                      <h5 class="text-white font-semibold mb-3">Key Features:</h5>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Stable chromatic pitch detection with smooth, jitter-free filtering</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">High-visibility tuning dial with precise cents-sharp and cents-flat readouts</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Large display designed for easy reading from a music stand</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Adjustable A4 reference frequency with custom Hz calibration</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Built-in presets for alternate tunings</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Realistic acoustic reference tones for tuning by ear</span></div>
+                        <div class="flex items-start space-x-2"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div><span class="text-gray-300 text-sm leading-snug">Chromatic mode for guitar and other acoustic instruments</span></div>
+                      </div>
+                    </div>
+                    <div class="w-full mt-auto bg-gray-800/80 border border-gray-700/60 text-gray-400 py-3 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 flex-shrink-0 cursor-default">
+                      <span>Coming Soon to Android</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- About View -->
+        <div id="page-about" class="hidden">
+          <div class="px-6 py-20">
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                  About Practice Lab
+                </h1>
+              </div>
+
+              <!-- Mission Section -->
+              <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-gray-700/50">
+                <p class="text-gray-300 text-lg leading-relaxed">
+                  I created these tools to bring more structure to my practice. While balancing work, life, and music, I realized I needed to be more disciplined and focused in order to make the most of the time I can dedicate to practicing.
+                </p>
+              </div>
+
+              <!-- Philosophy Section -->
+              <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                  <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-blue-400 mr-3"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <h3 class="text-xl font-semibold text-white">Built with Purpose</h3>
+                  </div>
+                  <p class="text-gray-300">
+                    Every tool addresses a specific practice need. No bloat, no unnecessary features - just focused functionality that helps you practice better.
+                  </p>
+                </div>
+
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                  <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-red-400 mr-3"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    <h3 class="text-xl font-semibold text-white">Contact</h3>
+                  </div>
+                  <p class="text-gray-300">
+                    <a id="contact-email" href="#" class="text-purple-400 hover:text-purple-300 hover:underline"></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Footer -->
+      <footer class="relative z-10 bg-black/40 border-t border-gray-800/80 backdrop-blur-md py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <!-- Brand -->
+          <div class="flex items-center space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-purple-400"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <span class="text-white font-bold tracking-wider">PRACTICE LAB</span>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
+            <button 
+              onclick="showPage('home')"
+              class="hover:text-white transition-colors duration-200 cursor-pointer"
+            >
+              Apps
+            </button>
+            <button 
+              onclick="showPage('about')"
+              class="hover:text-white transition-colors duration-200 cursor-pointer"
+            >
+              About
+            </button>
+            <a 
+              href="./privacy.html"
+              class="hover:text-white transition-colors duration-200 font-medium text-purple-400 hover:text-purple-300"
+            >
+              Privacy Policy
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-gray-500 text-xs text-center md:text-right">
+            &copy; <span id="copyright-year">2026</span> Practice Lab. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Vanilla Navigation Script -->
+    <script>
+      function showPage(page) {
+        const homeEl = document.getElementById('page-home');
+        const aboutEl = document.getElementById('page-about');
+        const navApps = document.getElementById('nav-apps');
+        const navAbout = document.getElementById('nav-about');
+
+        if (page === 'about') {
+          homeEl.classList.add('hidden');
+          aboutEl.classList.remove('hidden');
+          navApps.className = 'transition-colors duration-200 text-gray-300 hover:text-white cursor-pointer';
+          navAbout.className = 'transition-colors duration-200 text-white font-medium cursor-pointer';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          aboutEl.classList.add('hidden');
+          homeEl.classList.remove('hidden');
+          navApps.className = 'transition-colors duration-200 text-white font-medium cursor-pointer';
+          navAbout.className = 'transition-colors duration-200 text-gray-300 hover:text-white cursor-pointer';
+        }
+      }
+
+      function scrollToApps() {
+        showPage('home');
+        const appsEl = document.getElementById('apps');
+        if (appsEl) {
+          appsEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      const yearEl = document.getElementById('copyright-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      (function() {
+        const u = 'hello';
+        const d = 'catherina.dev';
+        const el = document.getElementById('contact-email');
+        if (el) {
+          el.href = 'mai' + 'lto:' + u + '@' + d;
+          el.textContent = u + '@' + d;
+        }
+      })();
+    </script>
   </body>
 </html>

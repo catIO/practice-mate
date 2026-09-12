@@ -70,10 +70,15 @@ const AppCard = ({ app }: AppCardProps) => {
 
         {/* Action buttons */}
         {url ? (
-          <div className="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mt-auto bg-gradient-to-r from-blue-500 to-purple-700 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-500 hover:shadow-lg hover:scale-[1.02] flex items-center justify-center space-x-2 flex-shrink-0 cursor-pointer"
+          >
             <span>Launch App</span>
             <ExternalLink className="h-4 w-4" />
-          </div>
+          </a>
         ) : (
           <div className="w-full mt-auto bg-gray-800/80 border border-gray-700/60 text-gray-400 py-3 px-6 rounded-xl font-medium flex items-center justify-center space-x-2 flex-shrink-0 cursor-default">
             <span>Coming Soon to Android</span>
@@ -83,21 +88,8 @@ const AppCard = ({ app }: AppCardProps) => {
     </>
   );
 
-  if (url) {
-    return (
-      <a 
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col cursor-pointer"
-      >
-        {cardContent}
-      </a>
-    );
-  }
-
   return (
-    <div className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-300 h-full flex flex-col">
+    <div className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full flex flex-col">
       {cardContent}
     </div>
   );
